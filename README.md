@@ -302,10 +302,8 @@ merge_emp_data4<-within(merge_emp_data4,rm(Over18,EmployeeCount,StandardHours))
 
 ### Bivariate Analysis
 
+#### Attrition Based on Age
 ```R
-#-----------------------------------Attrition Based on Age------------------------------#
-
-
 ggplot(as.data.frame(merge_emp_data4), aes(x = Age,fill=factor(Attrition))) +
   geom_histogram(breaks=seq(18, 60, by = 1),col="black" )+
   theme(plot.title = element_text(hjust = 0.5)) +
@@ -315,5 +313,6 @@ ggplot(as.data.frame(merge_emp_data4), aes(x = Age,fill=factor(Attrition))) +
 
 #Freshers are more likely attrite
 ```
+![data](https://github.com/yatinkode/Predict-Employee-Attrition-using-Logistic-Regression-in-R/blob/main/images/imageattrite.png)
 
 
